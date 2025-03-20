@@ -1,0 +1,76 @@
+/* Ensure the entire extension window is fixed and does not scroll */
+body {
+  width: 400px;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 10px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+h3 {
+  text-align: center;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.range-input {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.range-input input {
+  width: 45%;
+  padding: 5px;
+  margin-right: 10px;
+}
+
+/* Style for the delete button */
+.delete-range {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-left: 10px;
+  border-radius: 50%;
+  font-size: 16px;
+  font-weight: bold;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  margin-top: 5px;
+}
+
+/* Hover effect for the delete button */
+.delete-range:hover {
+  background-color: #d32f2f;
+}
+
+/* Prevent the body from scrolling */
+.container {
+  max-height: 400px;
+  overflow: hidden;
+}
+
+/* Container for the video list */
+#video-list {
+  max-height: calc(100% - 200px);  /* Allow space for other elements like buttons */
+  overflow-y: auto; /* Enable scrolling only for the video list */
+  margin-top: 10px;
+  padding-right: 10px;  /* Ensure scrollbar doesn't overlap the content */
+}
+
+/* Style for each video item */
+.video-item {
+  margin-bottom: 10px;
+  padding: 5px;
+  border-bottom: 1px solid #ddd;
+  display: block; /* Ensure that each video URL appears on a new line */
+}
